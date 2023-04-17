@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./userRegister.css"> -->
+    <title>Socket.io</title>
+</head>
+<body>
+    
+
+    <form action="/adminSignUp" method="POST">
+        <div class="container">
+          <h1>Register Admin</h1>
+          <p>Please fill in this form to create an Admin account.</p>
+          <hr>
+      
+          <label for="adminName"><b>Admin Name</b></label>
+          <input type="text" placeholder="Enter Admin Name" name="adminName" id="adminName" required>
+
+          <label for="adminEmail"><b>Admin Email</b></label>
+          <input type="text" placeholder="Enter Admin Email" name="adminEmail" id="adminEmail" required>
+      
+          <label for="password"><b>Admin Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" id="password" required>
+      
+          <label for="confirmPassword"><b>Admin Confirm Password</b></label>
+          <input type="password" placeholder="Confirm Password" name="confirmPassword" id="confirmPassword" required>
+          <hr>
+      
+          <!-- <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+          <button type="submit" class="registerbtn">Register Admin </button>
+        </div>
+      
+        <div class="container signin">
+          <p>Already have an account? <a href="#">Sign in</a>.</p>
+        </div> 
+        
+      </form>
+
+</body>
+</html>

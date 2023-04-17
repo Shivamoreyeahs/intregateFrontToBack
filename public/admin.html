@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script>
+      var socket = io();
+
+      socket.on("connectedRoom", function (data) {
+        document.body.innerHTML = " ";
+        document.write(data);
+      });
+
+      socket.on("testerEvent", function (data) {
+        document.write(data.description);
+      });
+    </script> -->
+
+
+        <script>
+    //          var socket = io('/signIn');
+    //     socket.on('signIn', function(data){
+    //      document.body.innerHTML ='';
+    //      document.write(data.message);
+    //   })
+
+    var socket = io.connect('http://localhost:3000');
+    socket.on('my other event', function(data){
+        document.getElementById('admin').innerHTML = data.description;
+    })
+        </script>
+
+
+    <title>Socket.io</title>
+  </head>
+  <body>
+    <p id="admin"></p>
+    <form action="/signIn" method="POST">
+      <div class="container">
+        <h1>Login User</h1>
+        <hr />
+
+        <label for="email"><b>Email</b></label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          name="email"
+          id="email"
+          required
+        />
+
+        <label for="password"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id="password"
+          required
+        />
+
+        <!-- <label for="confirmPassword"><b>Confirm Password</b></label>
+          <input type="password" placeholder="Confirm Password" name="confirmPassword" id="confirmPassword" required> -->
+        <hr />
+
+        <!-- <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+        <button type="submit" class="registerbtn">Sign In</button>
+      </div>
+    </form>
+  </body>
+</html>
